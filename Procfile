@@ -1,1 +1,1 @@
-web: allergens.wsgi
+web: gunicorn allergens.wsgi
