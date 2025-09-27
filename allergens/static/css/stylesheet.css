@@ -1,0 +1,102 @@
+/* ======================================= */
+/* GLOBAL STYLES                           */
+/* ======================================= */
+
+body {
+    text-align: center; 
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(lightblue, lightgray, lightblue);
+}
+
+#content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ======================================= */
+/* INDEX PAGE SPECIFIC STYLES              */
+/* ======================================= */
+
+.KcalTitle,
+.KcalSubTitle {
+    text-align: center;
+    width: 100%;
+}
+
+.centreCol {
+    text-align: center; 
+    padding: 10px 0;
+}
+
+.ParkHolidaysLogo {
+    display: inline-block; /* Allows vertical stacking/horizontal wrapping of links */
+    margin: 10px; /* Space between the logo links */
+}
+
+.ParkHolidaysLogo img {
+    max-width: 100%; /* Image will shrink to fit its container */
+    height: auto;   /* Maintains aspect ratio */
+    width: 250px;   /* Set a desirable maximum width for the images */
+}
+
+.mainText {
+    max-width: 80%; /* Limits the width of the paragraph */
+    margin: 20px auto; /* Centers the paragraph block */
+    font-size: 0.9em;
+    text-align: center;
+}
+
+/* ======================================= */
+/* HEADER & NAVIGATION STYLES              */
+/* ======================================= */
+
+/* Sets the header to a fixed height and ensures it spans the screen */
+.main-header {
+    width: 100%;
+    height: 100px; /* Adjust height as needed */
+    background-image: linear-gradient(lightblue, lightgray, lightblue);
+    padding: 0 20px;
+    box-sizing: border-box; /* Includes padding in the total width/height */
+}
+
+/* Uses Flexbox to space out items within the navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Pushes the left item and right group apart */
+    align-items: center; /* Vertically centers the items */
+    height: 100%; /* Makes the navbar fill the header height */
+    max-width: 1200px; /* Optional: Constrain the width if needed */
+    margin: 0 auto;
+}
+
+/* Style for the Home logo/image */
+.home-logo img {
+    height: 60px; /* Controls the size of the image */
+    vertical-align: middle;
+}
+
+/* Groups the right-side links together */
+.nav-links-right {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Adds space between the right-side links (Admin, Login, etc.) */
+}
+
+/* General styling for text links */
+.nav-item {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 10px;
+}
+
+.login-link img {
+    height: 40px; /* Controls the size of the login image */
+    vertical-align: middle;
+}
+
+.nav-item:hover {
+    background-color: #555;
+    border-radius: 4px;
+}

@@ -209,3 +209,4 @@ __marimo__/
 
 # Virtual environment for Python
 .venv/
+env.py

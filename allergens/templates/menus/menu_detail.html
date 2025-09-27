@@ -1,0 +1,34 @@
+{% extends "menus/base.html" %}
+{% load static %} 
+
+{% block title %}{{ menu_type.name }} Menu{% endblock title %}
+
+{% block head_extra %}
+    <style>
+        /* CUSTOM STYLING FOR BACKGROUND IMAGE */
+        body {
+            background-image: url('{{ menu_type.background_image }}'); 
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white; 
+        }
+    </style>
+{% endblock head_extra %}
+
+{% block content %}
+    <h1 class="MenuTitle"><img src="{{ menu_type.logo}}" alt="{{ menu_type.name }}"></h1>
+    
+    <div class="category-list">
+        <h2>Select a Category:</h2>
+        {% for category in categories %}
+            <div class="category-item">
+                <a href="{% url 'category_detail' category_slug=category.slug %}">
+                    <img src="{{ category.cat_image }}" alt="{{ category.name }}">
+                    <h3>{{ category.name }}</h3>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+    
+{% endblock content %}

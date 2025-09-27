@@ -16,9 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from menus.views import index
+# You can remove 'from menus.views import index' since you're using include now.
 
 urlpatterns = [
-    path('index/', index, name='index'),
+    path('', include('menus.urls')),
     path('admin/', admin.site.urls),
 ]

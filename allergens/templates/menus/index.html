@@ -1,0 +1,19 @@
+{% extends "menus/base.html" %}
+
+{% block title %}Park Holidays & Park Leisure Allergens{% endblock title %}
+
+{% block content %}
+    <br>
+    <h1 class="KcalTitle">Kcal & Allergen Information</h1>
+    <h3 class="KcalSubTitle">*Not all products are available on all parks.</h3>
+    <br>
+        <div class="centreCol">
+            {% for menu_type in menu_types %}
+                <a href="{% url 'menu_detail' menu_type_slug=menu_type.slug %}" class="ParkHolidaysLogo">
+                    <img alt="{{ menu_type.name }} Logo & Link" src="{{ menu_type.logo }}">
+                </a>
+                <br><br>
+            {% endfor %}
+            </div><br><br>
+    <p class="mainText">*As our dishes are prepared in a kitchen that contains allergens we cannot guarantee that any of our dishes are allergen free due to potential of cross contamination.</p>
+{% endblock content %}
